@@ -1,0 +1,31 @@
+#%RAML 0.8
+baseUri: https://mocksvc.mulesoft.com/mocks/5fe12609-f95e-4bbc-b838-982141309363
+title: Account Query
+version: 1.0
+
+/Query:
+    get:
+      queryParameters:
+        userID:
+          required: true
+        accountNumber:
+          required: true
+
+          
+      responses:
+        200 :
+          body :
+            application/json:
+             example : |
+               [{
+                 "Response":
+                  { 
+                 "firstName": "CHRIS",
+                 "lastName": "NISWANDEE",
+                 "accountNumber": "16000",
+                  "balance": "4000",
+                 "accountType": "Saving_Account"
+                 }
+               }]
+    post:
+            
